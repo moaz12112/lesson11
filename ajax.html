@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJAX</title>
+</head>
+<body>
+    <div id="t1"></div>
+    <script>
+        var request = new XMLHttpRequest();
+        //request.open("GET", "./json/data.json");
+        request.open("GET", "http://api.weatherapi.com/v1/current.json?key=69863d237a644144bfe112940230907&q=Damascus&aqi=no");
+        request.send(); 
+        request.onreadystatechange = function () {
+            let resp = this.responseText;
+            let json_resp = JSON.parse(resp);
+            console.log(json_resp);
+            document.getElementById("t1").innerHTML = json_resp.current.temp_c;
+            document.getElementById("t1").innerHTML += "<br>" + json_resp.current.last_updated;
+
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery.js"></script>
+</head>
+<body>
+    <div>
+        <h1>This is a head 1 element</h1>
+        <p>this is a paragraph.</p>
+        <input type="text" value="Ahmad">
+      </div>
+      <button id="click">click me</button>
+<!---
+<button id="hide">hide</button>
+<button id="show">show</button>
+<button id="toggle">toggle</button>
+-->
+
+<script>
+
+$(document).ready(function(){
+     $("#click").click(function(){
+        // alert($("[type]").val());
+        // $("div").empty();
+        // $("h1").remove();
+        // $("div").addClass("mydiv3").removeClass("mydiv2");
+        //$("div").toggleClass("mydiv2").toggleClass("mydiv3");
+        $("div").css({
+            "background-color": "red",
+            "width": "500px"
+        });
+     });    
+  });
+
+
+
+/*
+$(document).ready(function(){
+$("#hide").click(function(){
+$("p").hide();
+});
+$("#show").click(function(){
+    $("p").show();
+});
+$("#toggle").click(function(){
+    $("p").toggle();
+});
+});
+*/
+</script>
+
+</body>
+</html>
